@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let ul = document.createElement('ul');
+        document.body.append(ul);
+
+        while (true) {
+          let data = prompt("Введите текст для элемента списка", "");
+
+          if (!data) {
+            break;
+          }
+          arr.push(data);
+          arr.sort();
+        }
+        for (let i = 0; i < arr.length; i++) {
+            const j = arr[i];
+            let li = document.createElement('li');
+            li.textContent = j;
+            ul.append(li);
+
+        }
+
+    </script>
+    <div id="count"></div>
+    <script>
+        document.getElementById("count").innerHTML = arr.length.toString();
+    </script>
+
+</body>
+</html>
